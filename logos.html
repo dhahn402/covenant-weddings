@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Playfair+Display:wght@500;600&family=Marcellus&family=Tangerine:wght@700&family=EB+Garamond:ital@0;1&family=Cormorant+SC:wght@500;600&display=swap" rel="stylesheet"/>
+<style>
+  :root{--ivory:#fdfbf6;--cream:#f5efe4;--sage:#6f7d63;--sage-dk:#55614b;--gold:#b3924f;--ink:#3b352c;--muted:#9a8f7d}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--cream);font-family:"Marcellus",serif;padding:32px;color:var(--ink)}
+  h1{text-align:center;font-family:"Cormorant Garamond";font-size:34px;color:var(--sage-dk);margin-bottom:4px}
+  .sub{text-align:center;color:var(--muted);font-size:13px;letter-spacing:.15em;text-transform:uppercase;margin-bottom:28px}
+  .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;max-width:1000px;margin:0 auto}
+  .card{background:var(--ivory);border:1px solid #e8e0d2;border-radius:10px;padding:38px 24px;text-align:center;min-height:230px;display:flex;flex-direction:column;justify-content:center;position:relative}
+  .num{position:absolute;top:12px;left:16px;font-family:"Cormorant Garamond";color:var(--gold);font-size:15px;letter-spacing:.1em}
+  .label{position:absolute;bottom:10px;left:0;right:0;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+  .rule{width:60px;height:1px;background:var(--gold);margin:10px auto}
+  .tag{font-family:"Marcellus";font-size:10px;letter-spacing:.32em;text-transform:uppercase;color:var(--muted)}
+
+  /* 1 Classic stacked serif */
+  .l1 .amp{color:var(--gold)}
+  .l1 .name{font-family:"Cormorant Garamond";font-weight:600;font-size:40px;letter-spacing:.06em;line-height:1.05;color:var(--ink)}
+  /* 2 Script romance */
+  .l2 .name{font-family:"Great Vibes";font-size:58px;color:var(--sage-dk);line-height:.9}
+  /* 3 Monogram crest */
+  .l3 .mono{font-family:"Cormorant Garamond";font-weight:600;font-size:50px;color:var(--sage-dk);border:2px solid var(--gold);border-radius:50%;width:104px;height:104px;line-height:100px;margin:0 auto 10px}
+  .l3 .mono .amp{color:var(--gold);font-size:34px}
+  .l3 .name{font-family:"Marcellus";font-size:17px;letter-spacing:.34em;text-transform:uppercase;color:var(--ink)}
+  /* 4 Mixed script + caps */
+  .l4 .ever{font-family:"Tangerine";font-weight:700;font-size:70px;color:var(--gold);line-height:.6;display:block}
+  .l4 .amen{font-family:"Cormorant SC";font-weight:600;font-size:30px;letter-spacing:.28em;color:var(--ink);display:block}
+  /* 5 Minimal luxury */
+  .l5 .name{font-family:"Marcellus";font-size:26px;letter-spacing:.5em;text-transform:uppercase;color:var(--ink);padding-left:.5em}
+  .l5 .amp{color:var(--gold)}
+  .l5 .dove{font-size:22px;color:var(--sage)}
+  /* 6 Editorial Playfair */
+  .l6 .name{font-family:"Playfair Display";font-weight:600;font-size:34px;color:var(--ink);font-style:italic}
+  .l6 .amp{font-style:normal;color:var(--gold)}
+</style></head>
+<body>
+  <h1>Ever &amp; Amen — Logo Concepts</h1>
+  <p class="sub">Wedding Websites · Film · Planning &nbsp;·&nbsp; pick a direction, Sébastien refines</p>
+  <div class="grid">
+
+    <div class="card l1"><span class="num">01</span>
+      <div class="name">EVER<br/><span class="amp">&amp;</span><br/>AMEN</div>
+      <div class="rule"></div><div class="tag">Weddings · Web · Film</div>
+      <div class="label">Classic · stacked serif</div>
+    </div>
+
+    <div class="card l2"><span class="num">02</span>
+      <div class="name">Ever &amp; Amen</div>
+      <div class="rule"></div><div class="tag">A Coastal Wedding Studio</div>
+      <div class="label">Romantic · script</div>
+    </div>
+
+    <div class="card l3"><span class="num">03</span>
+      <div class="mono">E<span class="amp">&amp;</span>A</div>
+      <div class="name">Ever &amp; Amen</div>
+      <div class="label">Monogram · crest</div>
+    </div>
+
+    <div class="card l4"><span class="num">04</span>
+      <span class="ever">Ever</span>
+      <span class="amen">&amp; AMEN</span>
+      <div class="label">Mixed · script + caps</div>
+    </div>
+
+    <div class="card l5"><span class="num">05</span>
+      <div class="dove">&#10086;</div>
+      <div class="name">EVER <span class="amp">&amp;</span> AMEN</div>
+      <div class="label">Minimal · luxury</div>
+    </div>
+
+    <div class="card l6"><span class="num">06</span>
+      <div class="name">Ever <span class="amp">&amp;</span> Amen</div>
+      <div class="rule"></div><div class="tag">New Bern, NC</div>
+      <div class="label">Editorial · italic</div>
+    </div>
+
+  </div>
+</body></html>
