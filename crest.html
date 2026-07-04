@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Marcellus&family=Great+Vibes&display=swap" rel="stylesheet"/>
+<style>
+  :root{--ivory:#fdfbf6;--cream:#f5efe4;--sage:#6f7d63;--sage-dk:#55614b;--gold:#b3924f;--ink:#3b352c;--muted:#9a8f7d}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--cream);font-family:"Marcellus",serif;color:var(--ink);padding:30px}
+  h1{text-align:center;font-family:"Cormorant Garamond";font-size:32px;color:var(--sage-dk)}
+  .sub{text-align:center;color:var(--muted);font-size:12px;letter-spacing:.2em;text-transform:uppercase;margin:4px 0 26px}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:1040px;margin:0 auto}
+  .card{background:var(--ivory);border:1px solid #e8e0d2;border-radius:12px;padding:24px 16px 40px;text-align:center;position:relative}
+  .card svg{width:100%;height:auto;max-width:280px}
+  .num{position:absolute;top:10px;left:14px;font-family:"Cormorant Garamond";color:var(--gold);font-size:15px}
+  .label{position:absolute;bottom:12px;left:0;right:0;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+  text{fill:var(--ink)}
+  .g{fill:var(--gold)} .s{fill:var(--sage-dk)} .strokeG{stroke:var(--gold);fill:none} .strokeS{stroke:var(--sage-dk);fill:none}
+  @media(max-width:760px){.grid{grid-template-columns:1fr}}
+</style></head>
+<body>
+  <h1>Ever &amp; Amen — Crest Options</h1>
+  <p class="sub">“Two are better than one” · Ecclesiastes 4:9 · pick one, Sébastien perfects it</p>
+  <div class="grid">
+
+    <!-- CREST A: double-ring classic -->
+    <div class="card"><span class="num">A</span>
+      <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+        <defs><path id="Atop" d="M40,150 a110,110 0 0,1 220,0" fill="none"/></defs>
+        <circle cx="150" cy="150" r="128" class="strokeG" stroke-width="2.5"/>
+        <circle cx="150" cy="150" r="118" class="strokeG" stroke-width="1"/>
+        <text font-family="Marcellus" font-size="19" letter-spacing="4" class="g" text-anchor="middle">
+          <textPath href="#Atop" startOffset="50%">EVER &#8226; AMEN</textPath></text>
+        <circle cx="35" cy="150" r="3" class="g"/><circle cx="265" cy="150" r="3" class="g"/>
+        <text x="150" y="120" font-family="Cormorant Garamond" font-size="24" class="g" text-anchor="middle">&#10013;</text>
+        <text x="150" y="188" font-family="Cormorant Garamond" font-weight="700" font-size="74" class="s" text-anchor="middle">E<tspan class="g" font-size="50" dy="-4">&amp;</tspan>A</text>
+        <line x1="95" y1="208" x2="205" y2="208" class="strokeG" stroke-width="1"/>
+        <text x="150" y="226" font-family="Marcellus" font-size="10.5" letter-spacing="3" class="s" text-anchor="middle">TWO ARE BETTER THAN ONE</text>
+        <text x="150" y="244" font-family="Marcellus" font-size="9" letter-spacing="3" fill="#9a8f7d" text-anchor="middle">EST. 2026</text>
+      </svg>
+      <div class="label">A · Double-ring classic</div>
+    </div>
+
+    <!-- CREST B: script monogram + scripture -->
+    <div class="card"><span class="num">B</span>
+      <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+        <defs><path id="Btop" d="M46,150 a104,104 0 0,1 208,0" fill="none"/></defs>
+        <circle cx="150" cy="150" r="120" class="strokeS" stroke-width="2"/>
+        <text font-family="Marcellus" font-size="16" letter-spacing="4" class="s" text-anchor="middle">
+          <textPath href="#Btop" startOffset="50%">EVER &amp; AMEN</textPath></text>
+        <text x="38" y="156" font-size="15" class="g" text-anchor="middle">&#10086;</text>
+        <text x="262" y="156" font-size="15" class="g" text-anchor="middle">&#10087;</text>
+        <text x="150" y="165" font-family="Great Vibes" font-size="82" class="s" text-anchor="middle">E&amp;A</text>
+        <text x="150" y="200" font-family="Great Vibes" font-size="30" class="g" text-anchor="middle">Two are better than one</text>
+        <text x="150" y="226" font-family="Marcellus" font-size="10" letter-spacing="3" fill="#9a8f7d" text-anchor="middle">ECCLESIASTES 4:9</text>
+      </svg>
+      <div class="label">B · Script &amp; scripture</div>
+    </div>
+
+    <!-- CREST C: minimal luxe ring -->
+    <div class="card"><span class="num">C</span>
+      <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+        <defs><path id="Ctop" d="M58,150 a92,92 0 0,1 184,0" fill="none"/></defs>
+        <circle cx="150" cy="150" r="112" class="strokeG" stroke-width="1.5"/>
+        <text font-family="Marcellus" font-size="13" letter-spacing="6" class="g" text-anchor="middle">
+          <textPath href="#Ctop" startOffset="50%">EVER &amp; AMEN</textPath></text>
+        <text x="150" y="90" font-size="15" class="g" text-anchor="middle">&#10086;</text>
+        <text x="150" y="178" font-family="Cormorant Garamond" font-weight="600" font-size="70" class="s" text-anchor="middle">E<tspan class="g">&amp;</tspan>A</text>
+        <line x1="120" y1="198" x2="180" y2="198" class="strokeG" stroke-width="1"/>
+        <text x="150" y="216" font-family="Marcellus" font-size="10.5" letter-spacing="3.5" class="s" text-anchor="middle">TWO ARE BETTER THAN ONE</text>
+      </svg>
+      <div class="label">C · Minimal luxe</div>
+    </div>
+
+  </div>
+</body></html>
