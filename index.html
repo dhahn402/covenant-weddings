@@ -390,6 +390,7 @@
           <button type="submit" class="btn btn-gold" id="submitBtn" style="width:100%;justify-content:center">Book My Consultation 💍</button>
           <p class="msg" id="formMsg" style="text-align:center"></p>
           <p style="font-size:.78rem;color:var(--muted);text-align:center;margin-top:.6rem">We&rsquo;ll reach out within 24 hours to confirm your time &amp; how you&rsquo;d like to pay.</p>
+          <a href="mailto:dhahn402@gmail.com?subject=Wedding%20Consultation%20Request&amp;body=Hi%20David%2C%20I%27d%20like%20to%20book%20a%20consultation.%0A%0AOur%20names%3A%20%0AWedding%20date%3A%20%0APhone%3A%20%0AWhat%20we%20need%3A%20" class="btn btn-ghost" style="width:100%;justify-content:center;margin-top:.8rem">✉️ Prefer email? Email David directly</a>
         </form>
       </div>
       <p class="placeholder-note">⚙️ To finish: connect your booking email and swap the sample discount codes for your real ones.</p>
@@ -497,7 +498,7 @@
         } else { throw new Error(); }
       }).catch(function(){
         btn.disabled=false; btn.textContent="Book My Consultation 💍";
-        msg.className="msg err"; msg.textContent="Something went wrong — please text David at (252) 626-6236.";
+        msg.className="msg err"; msg.innerHTML="Something went wrong — please email <a href='mailto:dhahn402@gmail.com' style='color:var(--gold)'>dhahn402@gmail.com</a> or text (252) 626-6236.";
       });
     });
     // ---- Prayer request form ----
