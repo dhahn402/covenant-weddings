@@ -154,6 +154,7 @@
         <a href="#portfolio">Portfolio</a>
         <a href="#about">The Duo</a>
         <a href="#book">Book</a>
+        <a href="#prayer">Prayer 🙏</a>
       </nav>
       <a class="btn btn-gold" href="#book">Book a Consultation</a>
     </div>
@@ -386,6 +387,23 @@
     </div>
   </section>
 
+  <!-- Prayer -->
+  <section id="prayer">
+    <div class="wrap" style="max-width:640px;text-align:center">
+      <span class="kicker">🙏 We&rsquo;d Be Honored</span>
+      <h2 style="font-size:clamp(1.8rem,4vw,2.6rem);color:var(--ink);margin:.5rem 0 .6rem">How Can We Pray for You?</h2>
+      <p style="color:var(--muted);margin-bottom:1.4rem">Wedding or not, we would love to pray for your family, your marriage, and your loved ones. Share a request below — it comes straight to us, and we will lift it up. There&rsquo;s no charge for this, ever. 💛</p>
+      <form id="prayerForm" style="max-width:480px;margin:0 auto;text-align:left">
+        <div class="field"><label>Your Name (optional)</label><input name="name" autocomplete="name" /></div>
+        <div class="field"><label>Email (optional — if you&rsquo;d like a reply)</label><input name="email" type="email" inputmode="email" autocomplete="email" /></div>
+        <div class="field"><label>Your Prayer Request</label><textarea name="request" rows="4" required placeholder="How can we pray for your family, marriage, or loved ones?"></textarea></div>
+        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true" />
+        <button type="submit" class="btn btn-gold" id="prayerBtn" style="width:100%;justify-content:center">Send My Prayer Request 🙏</button>
+        <p class="msg" id="prayerMsg" style="text-align:center"></p>
+      </form>
+    </div>
+  </section>
+
   <footer>
     <div class="wrap">
       <div class="foot">
@@ -469,6 +487,31 @@
         } else { throw new Error(); }
       }).catch(function(){
         btn.disabled=false; btn.textContent="Book My Consultation 💍";
+        msg.className="msg err"; msg.textContent="Something went wrong — please text David at (252) 626-6236.";
+      });
+    });
+    // ---- Prayer request form ----
+    document.getElementById("prayerForm").addEventListener("submit", function(e){
+      e.preventDefault();
+      var f = e.target;
+      if(f._gotcha.value){ return; }
+      var btn = document.getElementById("prayerBtn");
+      var msg = document.getElementById("prayerMsg");
+      btn.disabled = true; btn.textContent = "Sending...";
+      fetch("https://formspree.io/f/xbdvqvrk", {
+        method:"POST", headers:{"Content-Type":"application/json","Accept":"application/json"},
+        body: JSON.stringify({
+          _subject: "🙏 Ever & Amen Prayer Request",
+          _replyto: f.email.value || "",
+          name: f.name.value || "Anonymous", email: f.email.value || "—",
+          prayerRequest: f.request.value
+        })
+      }).then(function(r){
+        if(r.ok){ f.style.display="none"; msg.className="msg ok";
+          msg.innerHTML = "<span style='font-size:1.2rem;font-family:Cormorant Garamond'>Thank you — it would be our honor to pray for you. 🙏💛</span>";
+        } else { throw new Error(); }
+      }).catch(function(){
+        btn.disabled=false; btn.textContent="Send My Prayer Request 🙏";
         msg.className="msg err"; msg.textContent="Something went wrong — please text David at (252) 626-6236.";
       });
     });
