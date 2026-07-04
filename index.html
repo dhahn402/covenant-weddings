@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Covenant &amp; Co. — Custom Wedding Websites, Film &amp; Planning | New Bern, NC</title>
+  <meta name="description" content="Covenant & Co. builds beautiful custom wedding websites, films your day, and plans it start to finish — with venues who love you. New Bern & Eastern NC. Book a consultation. Price-match & money-back guaranteed." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Jost:wght@300;400;500;600&family=Great+Vibes&display=swap" rel="stylesheet" />
+  <style>
+    :root{
+      --ivory:#fdfbf6; --cream:#f5efe4; --sage:#6f7d63; --sage-dk:#55614b;
+      --gold:#b3924f; --gold-dk:#96793b; --ink:#3b352c; --muted:#857c6e; --line:#e8e0d2;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:"Jost",system-ui,sans-serif;background:var(--ivory);color:var(--ink);line-height:1.7;font-weight:300;-webkit-font-smoothing:antialiased}
+    h1,h2,h3,.serif{font-family:"Cormorant Garamond",Georgia,serif;font-weight:600;line-height:1.1}
+    .script{font-family:"Great Vibes",cursive;font-weight:400}
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:1120px;margin:0 auto;padding:0 clamp(1.1rem,4vw,2.2rem)}
+    .kicker{font-size:.72rem;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);font-weight:500}
+    .btn{display:inline-flex;align-items:center;gap:.5rem;font-weight:500;font-size:.9rem;letter-spacing:.06em;text-transform:uppercase;padding:.85rem 1.7rem;border-radius:2px;transition:transform .15s,background .2s,color .2s;cursor:pointer}
+    .btn-primary{background:var(--sage);color:#fff}
+    .btn-primary:hover{background:var(--sage-dk);transform:translateY(-2px)}
+    .btn-gold{background:var(--gold);color:#fff}.btn-gold:hover{background:var(--gold-dk);transform:translateY(-2px)}
+    .btn-ghost{border:1px solid var(--line);color:var(--ink);background:#fff}
+    .btn-ghost:hover{border-color:var(--sage);transform:translateY(-2px)}
+
+    header{position:sticky;top:0;z-index:60;background:rgba(253,251,246,.9);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+    .nav{display:flex;align-items:center;justify-content:space-between;height:70px}
+    .brand{font-family:"Cormorant Garamond";font-size:1.5rem;font-weight:700;color:var(--sage-dk);letter-spacing:.02em}
+    .brand small{font-family:"Jost";font-size:.55rem;letter-spacing:.28em;text-transform:uppercase;color:var(--muted);display:block;margin-top:-4px}
+    nav.links a{font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-left:1.7rem;font-weight:400}
+    nav.links a:hover{color:var(--sage)}
+    @media(max-width:820px){nav.links{display:none}}
+
+    /* Hero */
+    .hero{position:relative;background:linear-gradient(160deg,var(--cream),var(--ivory));text-align:center;padding:clamp(3.5rem,9vw,7rem) 0 clamp(3rem,7vw,5rem)}
+    .hero .script-word{font-size:clamp(2rem,6vw,3.2rem);color:var(--gold);display:block;margin-bottom:-.4rem}
+    .hero h1{font-size:clamp(2.6rem,7vw,5rem);color:var(--ink);margin-bottom:1.1rem;font-weight:600}
+    .hero p.lead{color:var(--muted);font-size:clamp(1.05rem,2vw,1.3rem);max-width:38ch;margin:0 auto 1.9rem;font-weight:300}
+    .hero .cta-row{display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap}
+    .trustbar{margin-top:2rem;color:var(--muted);font-size:.82rem;letter-spacing:.1em}
+    .trustbar b{color:var(--gold)}
+
+    section{padding:clamp(3rem,7vw,5.5rem) 0}
+    .head{text-align:center;max-width:640px;margin:0 auto 2.6rem}
+    .head h2{font-size:clamp(2rem,4.5vw,3rem);color:var(--ink);margin:.5rem 0}
+    .head p{color:var(--muted)}
+    .band{background:var(--cream)}
+
+    /* Duo intro */
+    .duo-intro{text-align:center;max-width:720px;margin:0 auto}
+    .duo-intro p{font-size:1.15rem;color:var(--muted)}
+    .duo-intro .names{font-family:"Great Vibes";font-size:2rem;color:var(--sage);margin-top:.6rem}
+
+    /* Services */
+    .services{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+    .svc{background:#fff;border:1px solid var(--line);padding:2rem 1.5rem;text-align:center;transition:transform .18s,box-shadow .2s}
+    .svc:hover{transform:translateY(-5px);box-shadow:0 18px 40px -22px rgba(59,53,44,.35)}
+    .svc .ico{font-size:2rem}
+    .svc h3{font-size:1.5rem;color:var(--sage-dk);margin:.6rem 0 .5rem}
+    .svc p{color:var(--muted);font-size:.95rem}
+    @media(max-width:760px){.services{grid-template-columns:1fr}}
+
+    /* Portfolio */
+    .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:.7rem}
+    .gallery div{aspect-ratio:3/4;background:linear-gradient(160deg,var(--cream),#eae2d3);border:1px solid var(--line);display:grid;place-items:center;font-size:1.8rem;color:var(--sage)}
+    @media(max-width:760px){.gallery{grid-template-columns:repeat(2,1fr)}}
+
+    /* Packages */
+    .pkgs{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;align-items:stretch}
+    .pkg{background:#fff;border:1px solid var(--line);padding:2rem 1.6rem;display:flex;flex-direction:column}
+    .pkg.feat{border:2px solid var(--gold);position:relative}
+    .pkg.feat::before{content:"Most Loved";position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--gold);color:#fff;font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;padding:.25rem .8rem;border-radius:999px}
+    .pkg h3{font-size:1.6rem;color:var(--ink)}
+    .pkg .price{font-family:"Cormorant Garamond";font-size:2.2rem;color:var(--sage-dk);font-weight:700;margin:.3rem 0 1rem}
+    .pkg .price small{font-size:.85rem;color:var(--muted);font-family:"Jost"}
+    .pkg ul{list-style:none;margin:0 0 1.4rem;flex:1}
+    .pkg li{padding:.35rem 0;color:var(--muted);font-size:.92rem;border-bottom:1px dashed var(--line)}
+    .pkg li::before{content:"✦ ";color:var(--gold)}
+    .addons{text-align:center;color:var(--muted);font-size:.9rem;margin-top:1.4rem}
+    @media(max-width:820px){.pkgs{grid-template-columns:1fr}}
+
+    /* Guarantees */
+    .guar{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;text-align:center}
+    .guar .g{padding:1.6rem}
+    .guar .ico{font-size:2.2rem;color:var(--gold)}
+    .guar h3{font-size:1.4rem;color:var(--sage-dk);margin:.4rem 0}
+    .guar p{color:var(--muted);font-size:.92rem}
+    @media(max-width:760px){.guar{grid-template-columns:1fr;gap:.5rem}}
+
+    /* Process */
+    .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem;text-align:center}
+    .step .n{width:52px;height:52px;border-radius:50%;border:1.5px solid var(--gold);color:var(--gold);font-family:"Cormorant Garamond";font-size:1.6rem;font-weight:700;display:grid;place-items:center;margin:0 auto .8rem}
+    .step h3{font-size:1.3rem;color:var(--ink);margin-bottom:.3rem}
+    .step p{color:var(--muted);font-size:.9rem}
+    @media(max-width:760px){.steps{grid-template-columns:1fr 1fr}}
+
+    /* About duo */
+    .about{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+    .person{background:#fff;border:1px solid var(--line);padding:2rem}
+    .person h3{font-size:1.6rem;color:var(--sage-dk)}
+    .person .role{color:var(--gold);font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:.6rem}
+    .person p{color:var(--muted);font-size:.95rem}
+    @media(max-width:760px){.about{grid-template-columns:1fr}}
+
+    /* Testimonials */
+    .quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+    .q{background:#fff;border:1px solid var(--line);padding:1.6rem;text-align:center}
+    .q .stars{color:var(--gold);letter-spacing:.15em}
+    .q p{font-family:"Cormorant Garamond";font-size:1.15rem;color:var(--ink);font-style:italic;margin:.6rem 0}
+    .q .who{color:var(--muted);font-size:.85rem}
+    @media(max-width:760px){.quotes{grid-template-columns:1fr}}
+
+    /* Booking */
+    .book{background:var(--sage-dk);color:#fff}
+    .book .head h2{color:#fff}.book .head p{color:rgba(255,255,255,.75)}
+    .book-card{max-width:640px;margin:0 auto;background:#fff;color:var(--ink);border-radius:6px;padding:clamp(1.5rem,5vw,2.6rem)}
+    .field{margin-bottom:1rem}
+    .field label{display:block;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:.35rem}
+    .field input,.field select,.field textarea{width:100%;border:1px solid var(--line);border-radius:3px;padding:.7rem .8rem;font-family:inherit;font-size:1rem;color:var(--ink);background:#fff}
+    .field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--sage)}
+    .grid2{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+    @media(max-width:560px){.grid2{grid-template-columns:1fr}}
+    .code-row{display:flex;gap:.6rem}
+    .totals{background:var(--cream);border-radius:4px;padding:1rem 1.2rem;margin:1rem 0}
+    .totals .r{display:flex;justify-content:space-between;font-size:.95rem;padding:.2rem 0;color:var(--muted)}
+    .totals .r.total{border-top:1px solid var(--line);margin-top:.4rem;padding-top:.6rem;color:var(--ink);font-weight:600;font-size:1.15rem}
+    .totals .r.total b{font-family:"Cormorant Garamond";font-size:1.5rem;color:var(--sage-dk)}
+    .msg{font-size:.8rem;margin-top:.4rem}
+    .msg.ok{color:var(--sage-dk)}.msg.err{color:#b4453a}
+    .hide{display:none}
+
+    footer{background:var(--ink);color:rgba(255,255,255,.75);padding:2.6rem 0}
+    .foot{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:1.5rem}
+    footer h4{color:#fff;font-family:"Cormorant Garamond";font-size:1.3rem;margin-bottom:.5rem}
+    footer a{color:rgba(255,255,255,.75)}footer a:hover{color:var(--gold)}
+    .foot .l{font-size:.9rem;margin-bottom:.25rem}
+    .copyright{border-top:1px solid rgba(255,255,255,.14);margin-top:1.8rem;padding-top:1.2rem;text-align:center;font-size:.8rem;color:rgba(255,255,255,.5)}
+    @media(max-width:700px){.foot{grid-template-columns:1fr}}
+    .placeholder-note{background:#fff8e6;border:1px solid var(--gold);color:var(--gold-dk);font-size:.8rem;padding:.5rem .9rem;border-radius:6px;text-align:center;max-width:720px;margin:1.2rem auto 0}
+  </style>
+</head>
+<body id="top">
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#top">Covenant &amp; Co.<small>Weddings · Web · Film</small></a>
+      <nav class="links">
+        <a href="#services">Services</a>
+        <a href="#packages">Packages</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#about">The Duo</a>
+        <a href="#book">Book</a>
+      </nav>
+      <a class="btn btn-gold" href="#book">Book a Consultation</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="wrap">
+      <span class="script script-word">from &lsquo;yes&rsquo; to</span>
+      <h1>&ldquo;I Do&rdquo; — We Build It All.</h1>
+      <p class="lead">Breathtaking custom wedding websites, cinematic film, and planning from start to finish — with venues who love you.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#book">Book a Consultation</a>
+        <a class="btn btn-ghost" href="#packages">See Packages</a>
+      </div>
+      <p class="trustbar">★★★★★ &nbsp;New Bern &amp; Eastern NC &nbsp;·&nbsp; <b>Price-Match</b> &amp; <b>Money-Back</b> Guaranteed</p>
+    </div>
+  </section>
+
+  <!-- Duo intro -->
+  <section>
+    <div class="wrap duo-intro">
+      <span class="kicker">A Two-Hearted Studio</span>
+      <p>One team, one booking, two specialists: <strong>David builds your website</strong> and handles the tech, while <strong>Sophia films your day</strong> and tells your story on social. A site that lives, and a film that lasts.</p>
+      <div class="names">David &amp; Sophia</div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="band">
+    <div class="wrap">
+      <div class="head"><span class="kicker">What We Do</span><h2>Start to Finish, We Do It All</h2><p>You dream it. We design it, film it, and launch it.</p></div>
+      <div class="services">
+        <div class="svc"><div class="ico">💻</div><h3>Custom Wedding Websites</h3><p>Bespoke, mobile-first sites with RSVP, registry links, galleries, timelines, travel &amp; FAQ — on your own domain.</p></div>
+        <div class="svc"><div class="ico">🎬</div><h3>Wedding Film &amp; Social</h3><p>Cinematic highlight films, teasers, and Instagram Reels — beautifully shot and embedded right on your site.</p></div>
+        <div class="svc"><div class="ico">📋</div><h3>Consultation &amp; Planning</h3><p>Guidance and coordination from first idea to final toast — plus venue connections who already love working with us.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio -->
+  <section id="portfolio">
+    <div class="wrap">
+      <div class="head"><span class="kicker">Our Work</span><h2>A Glimpse of Forever</h2><p>Swap these for real wedding photos, site mockups &amp; film stills.</p></div>
+      <div class="gallery"><div>💍</div><div>💐</div><div>🎬</div><div>💻</div><div>🥂</div><div>💒</div><div>📸</div><div>💛</div></div>
+    </div>
+  </section>
+
+  <!-- Packages -->
+  <section id="packages" class="band">
+    <div class="wrap">
+      <div class="head"><span class="kicker">Investment</span><h2>Packages Made for Your Day</h2><p>Transparent pricing. Mix, match, and add on.</p></div>
+      <div class="pkgs">
+        <div class="pkg">
+          <h3>Something Blue</h3>
+          <div class="price">$2,500<small> starting</small></div>
+          <ul>
+            <li>Custom wedding website</li>
+            <li>RSVP &amp; registry links</li>
+            <li>Gallery, timeline, travel &amp; FAQ</li>
+            <li>Custom domain &amp; setup</li>
+            <li>Mobile-first, we build it for you</li>
+          </ul>
+          <a class="btn btn-ghost" href="#book">Start Here</a>
+        </div>
+        <div class="pkg feat">
+          <h3>Ever After</h3>
+          <div class="price">$4,500<small>–$6,500</small></div>
+          <ul>
+            <li>Everything in Something Blue</li>
+            <li>Cinematic highlight film</li>
+            <li>Social teaser + Instagram Reels</li>
+            <li>Film embedded on your site</li>
+            <li>Priority scheduling</li>
+          </ul>
+          <a class="btn btn-gold" href="#book">Most Loved</a>
+        </div>
+        <div class="pkg">
+          <h3>Happily Ever After</h3>
+          <div class="price">$8,000<small>+</small></div>
+          <ul>
+            <li>Custom site + full-day film</li>
+            <li>Full social content pack</li>
+            <li>Venue coordination</li>
+            <li>Drone &amp; second shooter</li>
+            <li>Start-to-finish, white-glove</li>
+          </ul>
+          <a class="btn btn-ghost" href="#book">Go All In</a>
+        </div>
+      </div>
+      <p class="addons">Add-ons: extra film hours · drone · engagement mini-site · day-of live gallery · extra revisions — à la carte.</p>
+    </div>
+  </section>
+
+  <!-- Guarantees -->
+  <section>
+    <div class="wrap">
+      <div class="head"><span class="kicker">Our Promise</span><h2>Booked With Total Peace of Mind</h2></div>
+      <div class="guar">
+        <div class="g"><div class="ico">🤝</div><h3>Price-Match Guarantee</h3><p>Find a comparable custom package for less? We&rsquo;ll match it. You should never overpay for your day.</p></div>
+        <div class="g"><div class="ico">💯</div><h3>Money-Back Guarantee</h3><p>If we don&rsquo;t deliver what we promised, you get your money back. Simple as that.</p></div>
+        <div class="g"><div class="ico">✨</div><h3>Start to Finish</h3><p>Website, film, planning, venues — one team, one point of contact, from &lsquo;yes&rsquo; to &lsquo;I do.&rsquo;</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="band">
+    <div class="wrap">
+      <div class="head"><span class="kicker">How It Works</span><h2>Four Simple Steps</h2></div>
+      <div class="steps">
+        <div class="step"><div class="n">1</div><h3>Book</h3><p>Grab a consultation below — we&rsquo;ll get to know your story.</p></div>
+        <div class="step"><div class="n">2</div><h3>Plan</h3><p>We design your site &amp; map your film and timeline.</p></div>
+        <div class="step"><div class="n">3</div><h3>Build &amp; Shoot</h3><p>We build the website and capture your day.</p></div>
+        <div class="step"><div class="n">4</div><h3>Launch</h3><p>You go live — and it lasts a lifetime.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About the duo -->
+  <section id="about">
+    <div class="wrap">
+      <div class="head"><span class="kicker">Meet Us</span><h2>The Two Behind the Vows</h2></div>
+      <div class="about">
+        <div class="person">
+          <p class="role">The Builder</p>
+          <h3>David</h3>
+          <p>The web, tech, and SEO half. Founder of Hahn Technologies Corp, David builds fast, beautiful, high-converting websites and makes sure your day is found and remembered online — all run on faith, honesty, and doing things right.</p>
+        </div>
+        <div class="person">
+          <p class="role">The Storyteller</p>
+          <h3>Sophia</h3>
+          <p>The film, social, and venue half. Founder of Shoreline Socials, Sophia captures the moments and tells your story with a filmmaker&rsquo;s eye — and brings the venue relationships that make everything smoother.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="band">
+    <div class="wrap">
+      <div class="head"><span class="kicker">Kind Words</span><h2>Loved by Couples</h2><p>Swap these for your real reviews.</p></div>
+      <div class="quotes">
+        <div class="q"><div class="stars">★★★★★</div><p>&ldquo;Our website and film were beyond anything we imagined.&rdquo;</p><div class="who">— A future review 💛</div></div>
+        <div class="q"><div class="stars">★★★★★</div><p>&ldquo;They truly did it all — we just showed up and said &lsquo;I do.&rsquo;&rdquo;</p><div class="who">— A future review 💛</div></div>
+        <div class="q"><div class="stars">★★★★★</div><p>&ldquo;Worth every penny, and then some. Highly recommend!&rdquo;</p><div class="who">— A future review 💛</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Booking / checkout -->
+  <section id="book" class="book">
+    <div class="wrap">
+      <div class="head"><span class="kicker">Let&rsquo;s Begin</span><h2>Book Your Consultation</h2><p>Reserve your consultation — it&rsquo;s credited toward your package when you book with us.</p></div>
+      <div class="book-card">
+        <form id="bookForm">
+          <div class="grid2">
+            <div class="field"><label>Your Names *</label><input name="names" required placeholder="Jordan &amp; Taylor" autocomplete="name" /></div>
+            <div class="field"><label>Wedding Date</label><input name="weddingDate" type="date" /></div>
+          </div>
+          <div class="grid2">
+            <div class="field"><label>Email *</label><input name="email" type="email" required inputmode="email" autocomplete="email" /></div>
+            <div class="field"><label>Phone *</label><input name="phone" type="tel" required inputmode="tel" autocomplete="tel" /></div>
+          </div>
+          <div class="field"><label>Venue (if you have one)</label><input name="venue" placeholder="Venue or city" /></div>
+          <div class="field"><label>What do you need?</label>
+            <select name="need">
+              <option>Wedding Website</option>
+              <option>Website + Film</option>
+              <option>The Full Story (site + film + planning)</option>
+              <option>Not sure yet — help me!</option>
+            </select>
+          </div>
+          <div class="field"><label>Preferred Payment Method</label>
+            <select name="payment">
+              <option>Stripe (secure card link)</option>
+              <option>Zelle</option>
+              <option>Cash App</option>
+              <option>Apple Pay</option>
+              <option>Wire Transfer</option>
+              <option>Bitcoin (BTC)</option>
+            </select>
+            <p style="font-size:.78rem;color:var(--muted);margin-top:.35rem">We accept all of the above. No payment is taken on this page — after we confirm, we&rsquo;ll send you a secure Stripe link or the details for your chosen method.</p>
+          </div>
+          <div class="field"><label>Tell us about your day (optional)</label><textarea name="message" rows="3" placeholder="Your vision, colors, guest count, anything!"></textarea></div>
+
+          <div class="field"><label>Discount / Referral Code</label>
+            <div class="code-row">
+              <input id="codeInput" placeholder="Enter code" style="flex:1" />
+              <button type="button" class="btn btn-ghost" id="applyBtn" style="padding:.6rem 1.1rem">Apply</button>
+            </div>
+            <p class="msg" id="codeMsg"></p>
+          </div>
+
+          <div class="totals">
+            <div class="r"><span>Consultation</span><span id="baseP">$150</span></div>
+            <div class="r hide" id="discRow"><span id="discLbl">Discount</span><span id="discP">-$0</span></div>
+            <div class="r total"><span>Due to book</span><b id="totalP">$150</b></div>
+          </div>
+          <p style="font-size:.82rem;color:var(--muted);text-align:center;margin-bottom:1rem">Credited toward your wedding package. Backed by our price-match &amp; money-back guarantees.</p>
+
+          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true" />
+          <button type="submit" class="btn btn-gold" id="submitBtn" style="width:100%;justify-content:center">Book My Consultation 💍</button>
+          <p class="msg" id="formMsg" style="text-align:center"></p>
+          <p style="font-size:.78rem;color:var(--muted);text-align:center;margin-top:.6rem">We&rsquo;ll reach out within 24 hours to confirm your time &amp; how you&rsquo;d like to pay.</p>
+        </form>
+      </div>
+      <p class="placeholder-note">⚙️ Placeholders to set: brand name (Covenant &amp; Co. — or Cedar &amp; Vow / Ever &amp; Amen), your booking email, and swap the sample codes for your real ones.</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <div class="foot">
+        <div>
+          <h4>Covenant &amp; Co.</h4>
+          <p class="l">Custom wedding websites, film &amp; planning.</p>
+          <p class="l">Start to finish, we do it all. 💍</p>
+        </div>
+        <div>
+          <h4>Serving</h4>
+          <p class="l">New Bern &amp; Eastern NC</p>
+          <p class="l"><a href="#book">Book a Consultation</a></p>
+          <p class="l"><a href="#packages">Packages</a></p>
+        </div>
+        <div>
+          <h4>Follow</h4>
+          <p class="l"><a href="#">Instagram</a></p>
+          <p class="l"><a href="#">Facebook · Pinterest</a></p>
+        </div>
+      </div>
+      <div class="copyright">&copy; <span id="yr"></span> Covenant &amp; Co. · New Bern, NC · A Hahn Technologies Corp studio 🐓 · Soli Deo Gloria — Proverbs 31</div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("yr").textContent = "2026";
+    // ---- Consultation checkout with discount codes ----
+    var BASE = 150; // base consultation fee — change anytime
+    // Codes David or Sophia can hand out to discount the consultation:
+    var CODES = { LOVE10:10, BLESSED15:15, SOPHIA20:20, DAVID25:25, FIRSTLOOK50:50, VIP100:100 };
+    var discount = 0, appliedCode = "";
+    var fmt = function(n){ return "$" + n.toFixed(0); };
+
+    function render(){
+      var amt = BASE * (discount/100);
+      var total = Math.max(0, BASE - amt);
+      document.getElementById("baseP").textContent = fmt(BASE);
+      var discRow = document.getElementById("discRow");
+      if(discount>0){ discRow.classList.remove("hide");
+        document.getElementById("discLbl").textContent = "Discount (" + appliedCode + " · " + discount + "%)";
+        document.getElementById("discP").textContent = "-" + fmt(amt);
+      } else discRow.classList.add("hide");
+      document.getElementById("totalP").textContent = fmt(total);
+      return total;
+    }
+    document.getElementById("applyBtn").onclick = function(){
+      var code = document.getElementById("codeInput").value.trim().toUpperCase();
+      var msg = document.getElementById("codeMsg");
+      if(CODES[code]!==undefined){ discount=CODES[code]; appliedCode=code;
+        msg.textContent = "✓ Code applied — " + discount + "% off!"; msg.className="msg ok";
+      } else { discount=0; appliedCode="";
+        msg.textContent = code ? "That code isn't valid." : ""; msg.className="msg err"; }
+      render();
+    };
+    render();
+
+    // ---- Submit to Formspree ----
+    document.getElementById("bookForm").addEventListener("submit", function(e){
+      e.preventDefault();
+      var f = e.target;
+      if(f._gotcha.value){ return; }
+      var btn = document.getElementById("submitBtn");
+      var msg = document.getElementById("formMsg");
+      btn.disabled = true; btn.textContent = "Sending...";
+      var total = render();
+      var data = {
+        _subject: "💍 New Wedding Consultation — " + f.names.value,
+        _replyto: f.email.value,
+        names: f.names.value, email: f.email.value, phone: f.phone.value,
+        weddingDate: f.weddingDate.value || "Not set", venue: f.venue.value || "—",
+        need: f.need.value, paymentMethod: f.payment.value, message: f.message.value || "—",
+        discountCode: appliedCode || "None", consultationTotal: "$" + total.toFixed(0)
+      };
+      fetch("https://formspree.io/f/xbdvqvrk", {
+        method:"POST", headers:{"Content-Type":"application/json","Accept":"application/json"},
+        body: JSON.stringify(data)
+      }).then(function(r){
+        if(r.ok){ f.style.display="none"; msg.className="msg ok";
+          msg.innerHTML = "<span style='font-size:1.3rem;font-family:Cormorant Garamond'>Thank you! 💛</span><br>We&rsquo;ve got your details and will reach out within 24 hours. Congratulations on your engagement!";
+        } else { throw new Error(); }
+      }).catch(function(){
+        btn.disabled=false; btn.textContent="Book My Consultation 💍";
+        msg.className="msg err"; msg.textContent="Something went wrong — please text David at (252) 626-6236.";
+      });
+    });
+  </script>
+</body>
+</html>
