@@ -315,6 +315,12 @@
     <div class="wrap" style="text-align:center;max-width:760px">
       <span class="kicker">More Than Two — A Whole Team</span>
       <h2 style="font-size:clamp(1.8rem,4vw,2.6rem);color:var(--ink);margin:.5rem 0 .8rem">Backed by Tech, AI &amp; a Coastal Crew</h2>
+      <div style="position:relative;max-width:170px;margin:0 auto 1.1rem;border-radius:16px;overflow:hidden;box-shadow:0 14px 32px -16px rgba(59,53,44,.45);ring:1px solid var(--line)">
+        <video id="hahnRooster" autoplay loop muted playsinline preload="metadata" aria-label="Hahn Technologies Corp animated rooster" style="width:100%;height:auto;display:block">
+          <source src="HahnTech-rooster.mp4" type="video/mp4" />
+        </video>
+        <span id="roosterHint" style="position:absolute;bottom:6px;right:6px;background:rgba(0,0,0,.55);color:#fff;font-size:10px;font-weight:600;padding:2px 7px;border-radius:999px;pointer-events:none">🔊 tap for sound</span>
+      </div>
       <p style="color:var(--muted);margin-bottom:1.5rem">You&rsquo;re never trusting just one person. Every wedding is powered by <strong>Hahn Technologies Corp</strong> &amp; <strong>Hahn AI</strong>, the university-level science of <strong>Dr. William Hahn, PhD</strong> — an FAU mathematics professor and co-director of the <strong>FAU AI Sandbox</strong> — the marketing muscle of <strong>Pineland Marketing</strong> (Brett Hahn, 15+ years), immersive <strong>360Cow</strong> video, and social storytelling by <strong>Shoreline Socials</strong>. A whole brain-trust behind your day.</p>
       <div style="display:flex;gap:.7rem;justify-content:center;flex-wrap:wrap">
         <a class="btn btn-ghost" href="https://hahn.ai" target="_blank" rel="noopener">Meet the AI Team → hahn.ai</a>
@@ -527,6 +533,18 @@
         msg.className="msg err"; msg.textContent="Something went wrong — please text David at (252) 626-6236.";
       });
     });
+    // ---- Hahn rooster: play once with sound on first interaction ----
+    (function(){
+      var v = document.getElementById("hahnRooster"); if(!v) return;
+      var hint = document.getElementById("roosterHint");
+      var events = ["pointerdown","touchstart","keydown","scroll"];
+      function playSound(){
+        events.forEach(function(e){ window.removeEventListener(e, playSound); });
+        if(hint) hint.style.display="none";
+        v.loop=false; v.muted=false; v.currentTime=0; v.play().catch(function(){});
+      }
+      events.forEach(function(e){ window.addEventListener(e, playSound, {passive:true}); });
+    })();
   </script>
 </body>
 </html>
