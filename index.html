@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ever &amp; Amen — Custom Wedding Websites, Film &amp; Planning | New Bern, NC</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%236f7d63'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='15' font-weight='bold' fill='%23fdfbf6' text-anchor='middle'%3EEA%3C/text%3E%3C/svg%3E" />
   <meta name="description" content="Ever & Amen builds beautiful custom wedding websites, films your day, and plans it start to finish — with venues who love you. New Bern & Eastern NC. Book a consultation. Price-match & money-back guaranteed." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -473,6 +474,7 @@
       var data = {
         _subject: "💍 New Wedding Consultation — " + f.names.value,
         _replyto: f.email.value,
+        _cc: "dhahn402@gmail.com, hahntechnologies@gmail.com",
         names: f.names.value, email: f.email.value, phone: f.phone.value,
         weddingDate: f.weddingDate.value || "Not set", venue: f.venue.value || "—",
         need: f.need.value, paymentMethod: f.payment.value, message: f.message.value || "—",
@@ -503,6 +505,7 @@
         body: JSON.stringify({
           _subject: "🙏 Ever & Amen Prayer Request",
           _replyto: f.email.value || "",
+          _cc: "dhahn402@gmail.com, hahntechnologies@gmail.com",
           name: f.name.value || "Anonymous", email: f.email.value || "—",
           prayerRequest: f.request.value
         })
