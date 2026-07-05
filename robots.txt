@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://everandamen.org/sitemap.xml
