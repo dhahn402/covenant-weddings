@@ -177,6 +177,15 @@
   </style>
 </head>
 <body id="top">
+<select aria-label="Translate this page" onchange="if(this.value)location.href=this.value" style="position:fixed;top:10px;right:10px;z-index:99999;background:rgba(12,20,38,.92);color:#fff;border:1px solid rgba(255,255,255,.35);border-radius:999px;padding:.4rem .7rem;font:600 12px system-ui,-apple-system,sans-serif;cursor:pointer;box-shadow:0 3px 10px rgba(0,0,0,.3)">
+  <option value="">🌐 Language</option>
+  <option value="https://translate.google.com/translate?sl=en&amp;tl=es&amp;u=https://everandamen.org/">Español</option>
+  <option value="https://translate.google.com/translate?sl=en&amp;tl=fr&amp;u=https://everandamen.org/">Français</option>
+  <option value="https://translate.google.com/translate?sl=en&amp;tl=pt&amp;u=https://everandamen.org/">Português</option>
+  <option value="https://translate.google.com/translate?sl=en&amp;tl=zh-CN&amp;u=https://everandamen.org/">中文</option>
+  <option value="https://translate.google.com/translate?sl=en&amp;tl=hi&amp;u=https://everandamen.org/">हिन्दी</option>
+  <option value="https://translate.google.com/translate?sl=en&amp;tl=ar&amp;u=https://everandamen.org/">العربية</option>
+</select>
   <audio id="bgMusic" loop preload="none"><source src="wedding-music.mp3" type="audio/mpeg" /></audio>
   <button id="musicBtn" aria-label="Play chill wedding music" style="position:fixed;bottom:16px;left:16px;z-index:70;background:var(--sage);color:#fff;border:none;border-radius:999px;padding:.55rem .9rem;font-size:.82rem;font-weight:600;cursor:pointer;box-shadow:0 8px 20px -8px rgba(85,97,75,.6);display:flex;align-items:center;gap:.4rem">🎵&nbsp;<span id="musicLabel">Play music</span></button>
   <header>
