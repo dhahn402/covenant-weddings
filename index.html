@@ -401,7 +401,6 @@
     <div class="wrap">
       <div class="head"><span class="kicker">Why Couples Trust Us</span><h2>Real Proof, Real People</h2></div>
       <div class="quotes">
-        <div class="q"><div class="stars">★★★★★</div><p>A perfect <strong>5.0 across 128 real reviews</strong> on our team&rsquo;s decade-strong business — the standard we bring to your day.</p><div class="who">— Verified track record 💛</div></div>
         <div class="q"><div class="stars">★★★★★</div><p>One team does it <strong>all</strong> — website, cinematic film, drone, officiant, catering &amp; planning. No other studio around offers this.</p><div class="who">— Full-service, start to finish</div></div>
         <div class="q"><div class="stars">★★★★★</div><p>Backed by real credentials — a working filmmaker, an ordained officiant &amp; chef, and FAU-level AI &amp; tech.</p><div class="who">— Real people, real skill</div></div>
       </div>
@@ -467,7 +466,6 @@
           <a href="mailto:dhahn402@gmail.com?subject=Wedding%20Consultation%20Request&amp;body=Hi%20David%2C%20I%27d%20like%20to%20book%20a%20consultation.%0A%0AOur%20names%3A%20%0AWedding%20date%3A%20%0APhone%3A%20%0AWhat%20we%20need%3A%20" class="btn btn-ghost" style="width:100%;justify-content:center;margin-top:.8rem">✉️ Prefer email? Email David directly</a>
         </form>
       </div>
-      <p class="placeholder-note">⚙️ To finish: connect your booking email and swap the sample discount codes for your real ones.</p>
     </div>
   </section>
 
@@ -609,7 +607,9 @@
     // ---- Consultation checkout with discount codes ----
     var BASE = 300; // base consultation fee — change anytime
     // Codes David or Sophia can hand out to discount the consultation:
-    var CODES = { LOVE10:10, BLESSED15:15, SOPHIA20:20, DAVID25:25, FIRSTLOOK50:50, VIP100:100 };
+    var CODES = { LOVE10:10, BLESSED15:15, SOPHIA20:20, DAVID25:25 };
+    // NOTE: these codes are visible in page source — treat them as public promos.
+    // Never add a code above ~25%; anything larger can be self-applied by anyone.
     var discount = 0, appliedCode = "";
     var fmt = function(n){ return "$" + n.toFixed(0); };
 
